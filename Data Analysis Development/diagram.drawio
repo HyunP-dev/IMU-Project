@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="IrTE912bPxwYfWFtLuIa" name="Page-1">
+        <mxGraphModel dx="948" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RD1VP78NysdhjOlpyOIJ-1" target="RD1VP78NysdhjOlpyOIJ-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-1" value="Inertial&lt;br&gt;measurement unit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RD1VP78NysdhjOlpyOIJ-2" target="RD1VP78NysdhjOlpyOIJ-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-2" value="Low Pass Filter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RD1VP78NysdhjOlpyOIJ-4" target="RD1VP78NysdhjOlpyOIJ-9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-4" value="Threshold Filter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="RD1VP78NysdhjOlpyOIJ-6" target="RD1VP78NysdhjOlpyOIJ-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-6" value="L1 norm" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="RD1VP78NysdhjOlpyOIJ-9" value="Threshold Filter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,46 @@
+% !TeX TS-program = xelatex
+\documentclass[10pt, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=25mm,right=25mm,top=30mm,bottom=25mm]{geometry}
+\usepackage{kotex}
+\usepackage{setspace}
+\title{관성 측정 장비를 이용한 보행 패턴 인식}
+\author{한림대학교 소프트웨어융합대학 박 현}
+\date{}
+\begin{document}
+	\maketitle
+    \setstretch{1.3}
+	\section*{초록}
+    
+    \section{서론}
+    \hspace{\parindent} 관성 측정 장비(IMU)는 가속도 센서와 자이로스코프 그리고 지자기 센서로 이뤄져 있다.
+    이 중에서도 일반적으로 걸음 수를 측정할 때에 있어 가속도 센서가 주로 사용되는데, 가속도 센서만을 사용할 경우,
+    걷지 않더라도 걸음 수를 증가시키는 문제가 발생하기도 한다는 문제점이 있다.
+
+    \section{데이터 수집}
+    \hspace{\parindent} 스마트폰에는 IMU가 내장되어 있는데, 스마트폰 중에서도 개발하기에 용이한 Android OS를 탑재한 Pixel 3를 사용하였다.
+    
+    Android에는 센서값이 바뀔 때마다 실행되는 \texttt{onSensorChanged}라는 메소드를 지원하는데, 이를 이용해 센서값을 읽고,
+    별도의 Thread에서 \texttt{onSensorChanged} 에서 읽은 센서값을 $1000/(Sampling\ Rate)$ ms 마다 csv 파일에 기록하는 것으로
+    데이터를 수집하였다. 이 때, SamplingRate 의 단위는 Hz이다.
+
+
+
+    \section{알고리즘}
+    \subsection{걸음 수 측정 알고리즘}
+    \hspace{\parindent} 걸음 수를 측정할 수 있는 매우 간단한 방법은 다음과 같다.
+    \begin{equation}
+        steps = n(zeros(\frac{d}{dt}(LPF \circ L_2 \circ \vec{a})(t)))/2  
+    \end{equation}
+    \hspace{\parindent} 단, 위 방법은 단순히 가속도 센서에 힘이 가해질 때 마다 걸음 수를 증가시키기 때문에
+    임계값을 설정해줄 필요성이 있다.
+    
+    \subsection{센서 부착 위치 탐지 알고리즘}
+    흔히 휴대폰을 소지하는 방식은 다음 4가지로 구분할 수 있다.
+    \begin{enumerate}
+        \item 손에 쥐고 휴대폰을 바라보고 있는 경우
+        \item 손에 쥐고 휴대폰을 바라보고 있지 않는 경우
+        \item 바지주머니에 넣는 경우
+        \item 가방에 넣는 경우
+    \end{enumerate}
+\end{document}
